@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms</title>
+    <link rel="stylesheet" href="style.css" />
+    <a href="#form-content" class="skip-link">Skip to the form content</a>
+    <header>
+      <h1>Job</h1>
+      <h3>Discovery</h3>
+    </header>
+  </head>
+  <body>
+    <main id="form-content">
+      <form class="grid" method="post" aria-describedby="Help">
+        <div>
+          <label for="name">Full name</label>
+          <input
+            type="text"
+            name="name"
+            placeholder="Maryan Ali"
+            required
+            minlength="2"
+            maxlength="20"
+            autofocus
+            id="name"
+          />
+        </div>
+        <div>
+          <label for="phone">Phone number</label>
+          <input
+            type="tel"
+            name="phone"
+            placeholder="+45 12 34 56 78 "
+            pattern="\d{8}|\d{2}\d{2}\d{2}\d{2}"
+            required
+            id="phone"
+          />
+        </div>
+        <div>
+          <label for="email">Email address</label>
+          <input
+            type="email"
+            placeholder="example@gmail.com"
+            title="Please enter a valid email adress (example@gmail.com)"
+            required
+            id="email"
+          />
+        </div>
+        <div>
+          <label for="password">Password</label>
+          <input
+            type="password"
+            name="password"
+            placeholder="Enter password"
+            min="8"
+            maxlength="25"
+            pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])([A-Za-z\@$!%*?&]{8,25}$)"
+            aria-describedby="Password Hints"
+            title="MUST be 8-25 characters, incl. at least one 0-9, A-z
+            (Upper/Lowercase) & special character."
+            required
+            id="password"
+          />
+        </div>
+        <fieldset>
+          <legend>Gender</legend>
+          <div>
+            <label
+              ><input
+                type="radio"
+                name="gender"
+                value="male"
+                required
+              />Male</label
+            >
+            <label
+              ><input
+                type="radio"
+                name="gender"
+                value="female"
+                required
+              />Female</label
+            >
+            <label
+              ><input
+                type="radio"
+                name="gender"
+                value="other"
+                required
+              />Other</label
+            >
+          </div>
+        </fieldset>
+        <div>
+          <label for="birthdate">Date of Birth</label>
+          <input type="date" name="birthdate" required id="birthdate" />
+        </div>
+        <fieldset>
+          <legend aria-label="Choose your country">Country</legend>
+          <select name="descent" id="descent" required>
+            <option value="">-- Select your country--</option>
+            <option value="denmark">Denmark</option>
+            <option value="sweden">Sweden</option>
+            <option value="norway">Norway</option>
+            <option value="finland">Finland</option>
+            <option value="germany">Germany</option>
+            <option value="netherland">Netherland</option>
+            <option value="united-kingdom">United Kingdom</option>
+            <option value="ireland">Ireland</option>
+            <option value="france">France</option>
+            <option value="spain">Spain</option>
+            <option value="italy">Italy</option>
+            <option value="united-states">United States</option>
+            <option value="poland">Poland</option>
+            <option value="canada">Canada</option>
+            <option value="australia">Australia</option>
+            <option value="switzerland">Switzerland</option>
+            <option value="austria">Austria</option>
+            <option value="belgium">Belgium</option>
+            <option value="portugal">Portugal</option>
+            <option value="new-zealand">New Zealand</option>
+          </select>
+        </fieldset>
+
+        <fieldset>
+          <legend aria-label="Range your experience from 0 to 10">
+            Experience Level (0-10)
+          </legend>
+          <input
+            type="range"
+            min="0"
+            max="10"
+            step="1"
+            list="experience-range"
+            aria-label="Experience level 0 - 10"
+            required
+            id="experience"
+          />
+
+          <datalist id="experience-range">
+            <option value="0" label="0"></option>
+            <option value="1" label="1"></option>
+            <option value="2" label="2"></option>
+            <option value="3" label="3"></option>
+            <option value="4" label="4"></option>
+            <option value="5" label="5"></option>
+            <option value="6" label="6"></option>
+            <option value="7" label="7"></option>
+            <option value="8" label="8"></option>
+            <option value="9" label="9"></option>
+            <option value="10" label="10"></option>
+          </datalist>
+        </fieldset>
+        <fieldset>
+          <legend>Job type:</legend>
+          <label>
+            <input
+              type="checkbox"
+              name="jobtype"
+              value="fulltime"
+              required
+              id="fulltime"
+            />
+            Full-time</label
+          >
+          <label>
+            <input
+              type="checkbox"
+              name="jobtype"
+              value="parttime"
+              required
+              id="parttime"
+            />
+            Part-time</label
+          >
+          <label>
+            <input
+              type="checkbox"
+              name="jobtype"
+              value="internship"
+              required
+              id="internship"
+            />
+            Internship</label
+          >
+          <fieldset>
+            <legend aria-label="Select your interests">Interests</legend>
+            <select name="role" id="role" required>
+              <option value="">-- Select your interests--</option>
+              <option value="frontend">Frontend</option>
+              <option value="backend">Backend</option>
+              <option value="ux">UX design</option>
+              <option value="date">Data Analyst</option>
+            </select>
+          </fieldset>
+        </fieldset>
+        <div>
+          <label for="about-you">About You</label>
+          <textarea
+            name="about-you"
+            rows="5"
+            cols="70"
+            placeholder="Write a short description about yourself..."
+            aria-describedby="short-about-you"
+            required
+            id="about-you"
+          ></textarea>
+        </div>
+        <div>
+          <label for="cv">Upload your CV</label>
+          <input
+            type="file"
+            name="cv"
+            accept=".pdf,.doc,.docs"
+            aria-describedby="CV"
+            required
+            id="cv"
+          />
+        </div>
+
+        <label>
+          <input type="checkbox" id="terms" name="terms" required />
+          I agree to the terms and conditions
+        </label>
+        <div class="grid-button">
+          <button aria-label="Submit form" type="button">Submit now</button>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>

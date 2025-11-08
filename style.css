@@ -1,0 +1,170 @@
+:root {
+  --bgc: rgb(173, 216, 230);
+  --form: rgb(255, 255, 255);
+  --button: rgb(20, 20, 55);
+  --border: gray;
+  --valid: rgb(23, 163, 75);
+  --invalid: rgb(220, 38, 38);
+  --focus: rgb(37, 99, 235); 
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  background: transparent;
+  color: inherit;
+}
+.skip-link:focus-visible {
+  top: 0;
+}
+
+:is(input, select, textarea, button, legend, label):focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+}
+
+:is(input, select, textarea):required:placeholder-shown {
+  border-color: var(--border);
+}
+
+:is(input, select, textarea):required:user-valid {
+  border-color: var(--valid);
+}
+
+:is(input, select, textarea):required:user-invalid {
+  border-color: var(--invalid);
+}
+
+html,
+body {
+  height: 100vh;
+  
+}
+
+body,main {
+  font-family: sans-serif;
+  background: var(--bgc);
+  display: grid;
+  justify-items: center;
+  justify-content: center;
+  padding: 24px;
+  margin: 0%;
+}
+
+form {
+  width: 100%;
+  max-width: 550px;
+  background: var(--form);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 24px;
+}
+
+h1 {
+  margin: 6px;
+  font-size: 50px;
+  text-align: center;
+  font-weight: 600;
+}
+h3 {
+  margin: 6px;
+  font-size: 30px;
+  text-align: center;
+  font-weight: 300;
+}
+
+legend,
+label {
+  font-size: 16px;
+  margin-top: 4px;
+}
+
+input,
+textarea,
+button,
+select {
+  font: inherit;
+}
+
+textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 11px;
+  margin: 2px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  transform: scale(1.15);
+  margin-right: 2px;
+  accent-color: #9cc1ff;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="date"],
+select {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 6px;
+}
+
+input[type="range"] {
+  display: grid;
+  transform: scale(1.15);
+  margin: auto;
+  padding: 10px;
+}
+
+fieldset {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 10px;
+}
+
+#cv::file-selector-button {
+  background: var(--button);
+  color: var(--form);
+  cursor: pointer;
+  border-radius: 12px;
+  padding: 6px;
+  margin: 2px;
+}
+
+button {
+  margin-top: 6px;
+  padding: 6px;
+  font-weight: 300;
+  cursor: pointer;
+  width: 40%;
+  margin: auto;
+  background: var(--button);
+  color: var(--form);
+  border-radius: 12px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.grid-button {
+  grid-column: 1 /-1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+    align-items: center;
+  justify-content: center;
+  }
+}
