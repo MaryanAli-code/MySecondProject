@@ -1,7 +1,0 @@
-En kort beskrivelse og refleksion af min tilgang til de forskellige metoder:
-
-Jeg startede med at bruge Figma til at lave en mockups for at visualisere, hvordan min formular skulle se ud. Mockup designet illustrerer et enkelt kolonne layout til mobil. Jeg har valgt at lave en jobansøgningsformular og bevidst valgt lyseblå og hvide farver, da de giver et udtryk af ro og samtidig sikrer høj kontrast og læsbarhed for brugeren, når vedkommende udfylder formularen. Derfor har jeg også benyttet accessibility checks, herunder aria-describedby, aria-label, focus states og responsivt design. 
-
-Derudover har jeg anvendt heuristisk evaluering for at sikre, at brugeren oplever formularen som nem at navigere, logisk og forudsigelig. Jeg har blandt andet brugt valideringsfeedback, fokusmarkeringer, vist fejlmeddelelser og anvendt ensartede farver.
-
-Undervejs har jeg testet formularen med Lighthouse samt manuelt testet den med tastatur for at opnå en mere brugervenlig og ensartet oplevelse. Ved færdiggørelsen af projektet testede jeg tilgængeligheden igen, og min formular fik en Accessibility score på 93.
