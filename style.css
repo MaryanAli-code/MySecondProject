@@ -5,15 +5,12 @@
   --border: gray;
   --valid: rgb(23, 163, 75);
   --invalid: rgb(220, 38, 38);
-  --focus: rgb(37, 99, 235); 
+  --focus: rgb(37, 99, 235);
 }
 
 .skip-link {
   position: absolute;
   left: -9999px;
-  top: auto;
-  background: transparent;
-  color: inherit;
 }
 .skip-link:focus-visible {
   top: 0;
@@ -39,10 +36,10 @@
 html,
 body {
   height: 100vh;
-  
 }
 
-body,main {
+body,
+main {
   font-family: sans-serif;
   background: var(--bgc);
   display: grid;
@@ -165,6 +162,6 @@ button {
     grid-template-columns: 1fr;
     padding: 1rem;
     align-items: center;
-  justify-content: center;
+    justify-content: center;
   }
 }
